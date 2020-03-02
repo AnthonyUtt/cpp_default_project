@@ -58,3 +58,7 @@ file(GLOB source_files "${source_dir}/*.cpp")
 # Add executable to build
 add_executable(${PROJECT_NAME} ${source_files})
 target_link_libraries(${PROJECT_NAME} PRIVATE project_options project_warnings)
+
+# Add API flags
+include(cmake/APIExportFlags.cmake)
+set_api_flags()
